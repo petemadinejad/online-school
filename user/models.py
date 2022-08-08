@@ -9,7 +9,7 @@ class User(AbstractUser):
     """
     Custom User Model
     """
-    phone_n = models.CharField(max_length=20, verbose_name=_('Phone'))
+    phone_number = models.CharField(max_length=20, verbose_name=_('Phone'))
 
     class Meta:
         db_table = 'user'
