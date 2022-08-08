@@ -9,6 +9,7 @@ class User(AbstractUser):
     """
     Custom User Model
     """
+    REQUIRED_FIELDS = ['phone_number']
     phone_number = models.CharField(max_length=20, verbose_name=_('Phone'))
 
     class Meta:
