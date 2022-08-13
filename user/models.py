@@ -5,10 +5,11 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
+def get_upload_path(instance, filename):
+    return os.path.join("user", "%d" % instance.id, filename)
+
+
 class User(AbstractUser):
-    @staticmethod
-    def get_upload_path(instance, filename):
-        return os.path.join("user", "%d" % instance.id, filename)
     """
     Custom User Model
     """
@@ -23,5 +24,3 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
-
-
