@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'user.apps.UserConfig',
     'schools.apps.SchoolsConfig',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [

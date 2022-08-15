@@ -19,10 +19,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 from user.urls import router as user_router
-
+from schools.urls import router as school_router
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include(user_router.urls), name='user'),
+    path('school/', include(school_router.urls), name='school'),
     path('api-auth/', include('rest_framework.urls')),
 ]
 if settings.IS_DEVEL:
